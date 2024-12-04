@@ -1,7 +1,14 @@
 from turtle import Turtle, Screen
 
-timmy_the_turtle =  Turtle()
-timmy_the_turtle.shape("turtle")
+ellen =  Turtle()
+ellen.shape("turtle")
+ellen.fillcolor("green")
+ellen.pencolor("brown")
+
+for sides in range(4):
+  ellen.forward(90)
+  ellen.right(90)
+
 
 screen = Screen()
 screen.exitonclick()

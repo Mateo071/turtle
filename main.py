@@ -87,10 +87,7 @@ def spirograph(num_of_circles):
     spirograph.circle(100, None, None)
     spirograph.left(rotation)
 
-# square()
-# dotted_line()
-# diff_shapes()
-# walk()
+
 while True:
   shape = int(input("What would you like to see? Please select one of the following by typing the corresponding number:\n\n1. Square\n2. Dotted Line\n3.Different Shapes\n4. Walk\n5. Spirograph\n>"))
 

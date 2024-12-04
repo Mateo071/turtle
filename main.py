@@ -71,7 +71,7 @@ def walk():
     walk.setheading(choice(directions))
     walk.forward(10)
 
-def spirograph():
+def spirograph(num_of_circles):
   spirograph = Turtle()
   spirograph.shape("triangle")
   spirograph.pensize(2)
@@ -80,16 +80,30 @@ def spirograph():
   spirograph.up()
   spirograph.goto(500, 0)
   spirograph.down()
-  for circle in range(72):
+
+  rotation = int(360/num_of_circles)
+  for circle in range(num_of_circles):
     spirograph.pencolor(random_color())
     spirograph.circle(100, None, None)
-    spirograph.left(5)
+    spirograph.left(rotation)
 
 # square()
 # dotted_line()
 # diff_shapes()
 # walk()
-spirograph()
+while True:
+  shape = int(input("What would you like to see? Please select one of the following by typing the corresponding number:\n\n1. Square\n2. Dotted Line\n3.Different Shapes\n4. Walk\n5. Spirograph\n>"))
 
-screen = Screen()
-screen.exitonclick()
+  if shape == 1:
+    square()
+  elif shape == 2:
+    dotted_line()
+  elif shape == 3:
+    diff_shapes()
+  elif shape == 4:
+    walk()
+  elif shape == 5:
+    spirograph(72)
+  else:
+    print("Please select a valid option.\n")
+
